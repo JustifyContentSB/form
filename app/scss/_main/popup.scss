@@ -1,0 +1,106 @@
+.popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__inner {
+        width: 100%;
+        max-width: 420px;
+        padding: 53px 48px;
+        background: #fff;
+        border-radius: 30px;
+        position: relative;
+    }
+    &__close {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: #F1F4F5;
+        border-radius: 50%;
+        transition: background .3s ease;
+        svg {
+            position: absolute;
+            left: 52%;
+            top: 51%;
+            transform: translate(-50%, -50%);
+            width: 11px;
+            height: 12px;
+            fill: var(--inputColor);
+            transition: fill .3s ease;
+        }
+        &:hover,
+        &:focus {
+            background: red;
+            svg {
+                fill: white;
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 24px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 116%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: var(--titleColor);
+    }
+    &__label {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        color: var(--inputColor);
+        border: 1px solid #C8D7DC;
+        border-radius: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background .3s ease;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover,
+        &:focus {
+            background: #F1F4F5;
+        }
+        input {
+            display: none;
+            &:checked~.popup__radio {
+                border-color: #04B45F;
+                border-width: 3px;
+                &::after {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+    }
+    &__radio {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        border-radius: 50%;
+        border: 1px solid #B1C4CA;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #04B45F;
+            transition: transform .2s ease;
+        }
+    }
+}
