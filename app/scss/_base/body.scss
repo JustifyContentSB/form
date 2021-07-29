@@ -9,3 +9,9 @@ body {
     background: linear-gradient(167.84deg, #FBFFFD 0%, #E5EFF5 99.19%);
     font-family: 'SFpro', Arial, sans-serif;
 }
+
+@media screen and (max-width: 767px) {
+    body {
+        padding-bottom: 20px;
+    }
+}
