@@ -86,14 +86,14 @@
             <div class="form__manage">
                 <input class="form__submit" type="submit" value="Подтвердить" disabled>
                 <label class="form__check">
-					<input type="checkbox">
+					<input type="checkbox" checked>
 					<span class="form__checkbox"></span>
 					<span class="form__text">
 						Cогласен с <a href="#">условиями оказания услуг</a>
 					</span>
 				</label>
                 <label class="form__check">
-					<input type="checkbox">
+					<input type="checkbox" checked>
 					<span class="form__checkbox"></span>
 					<span class="form__text">
 						Принимаю <a href="#">условия соглашения</a>
@@ -102,6 +102,19 @@
             </div>
         </form>
     </main>
+
+    <footer class="footer">
+        <div class="footer__inner container">
+            <p class="footer__copy">
+                &#169;
+                <script>
+                    let currentDate = new Date();
+                    document.write(currentDate.getFullYear() + '. ');
+                </script>
+                ООО «Мобильная реабилитация» <br> Все права защищены.
+            </p>
+        </div>
+    </footer>
 
 </body>
 
