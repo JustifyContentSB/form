@@ -25,6 +25,34 @@
         font-size: 16px;
         line-height: 100%;
         letter-spacing: -0.01em;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0%;
+            height: 2px;
+            background: var(--svgColorFocus);
+            transition: width .3s ease;
+        }
+        &::after {
+            left: auto;
+            right: 50%;
+        }
+        &.active {
+            &::before,
+            &::after {
+                width: 50%;
+            }
+        }
+        &.fill {
+            .form__placeholder {
+                top: 0;
+                left: 0;
+                font-size: 12px;
+            }
+        }
         input {
             width: 100%;
             height: 76px;
@@ -39,14 +67,30 @@
             &::placeholder {
                 color: var(--placeholder);
             }
-            &:focus~.form__placeholder {
-                top: 0;
-                left: 0;
-                font-size: 12px;
+            &:focus {
+                &~.form__placeholder {
+                    top: 0;
+                    left: 0;
+                    font-size: 12px;
+                }
+                &~.form__svg .form__svg-icon {
+                    fill: var(--svgColorFocus);
+                    stroke: var(--svgColorFocus);
+                }
             }
         }
         &--address {
             max-width: 100%;
+            &::before,
+            &::after {
+                background: #04B45F;
+            }
+            input:focus {
+                &~.form__svg .form__svg-icon {
+                    fill: #04B45F;
+                    stroke: #04B45F;
+                }
+            }
         }
     }
     &__placeholder {
@@ -68,6 +112,7 @@
             width: 20px;
             height: 20px;
             fill: var(--svgColor);
+            stroke: var(--svgColor);
         }
     }
     &__manage {

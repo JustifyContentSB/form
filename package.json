@@ -19,5 +19,7 @@
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "air-datepicker": "^2.2.3"
+  }
 }

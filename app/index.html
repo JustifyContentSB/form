@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/sfpro/fonts.css">
+    <link rel="stylesheet" href="js/libs/datepicker/datepicker.min.css">
     <link rel="stylesheet" href="css/index/style.min.css">
 </head>
 
@@ -20,66 +21,66 @@
             <h1 class="form__title">Регистрация</h1>
             <div class="form__inputs">
                 <label class="form__label">
+					<input type="text" name="name">
 					<span class="form__svg">
 						<svg class="form__svg-icon">
 							<use href="images/icons/sprite.svg#tel"></use>
 						</svg>
 					</span>
-					<input type="text">
 					<span class="form__placeholder">Фамилия имя отчество</span>
 				</label>
                 <label class="form__label">
+					<input class="form__datepicker" type="text" maxlength="10" name="birth">
 					<span class="form__svg">
 						<svg class="form__svg-icon">
 							<use href="images/icons/sprite.svg#date"></use>
 						</svg>
 					</span>
-					<input type="text">
 					<span class="form__placeholder">Дата рождения*</span>
 				</label>
                 <label class="form__label form__label--address">
+					<input type="text" name="address">
+					<span class="form__placeholder">Адрес пребывания</span>
 					<span class="form__svg">
 						<svg class="form__svg-icon">
 							<use href="images/icons/sprite.svg#address"></use>
 						</svg>
 					</span>
-					<input type="text">
-					<span class="form__placeholder">Адрес пребывания</span>
 				</label>
                 <label class="form__label">
+					<input type="text" name="injury">
 					<span class="form__svg">
 						<svg class="form__svg-icon">
 							<use href="images/icons/sprite.svg#injury"></use>
 						</svg>
 					</span>
-					<input type="text">
 					<span class="form__placeholder">Травма или проблемный сустав</span>
 				</label>
                 <label class="form__label">
+					<input class="form__datepicker form__datepicker-rehabilitation" type="text" maxlength="10" name="rehabilitation">
 					<span class="form__svg">
 						<svg class="form__svg-icon">
 							<use href="images/icons/sprite.svg#date"></use>
 						</svg>
 					</span>
-					<input type="text">
 					<span class="form__placeholder">Желаемая дата начала реабилитации</span>
 				</label>
                 <label class="form__label">
+					<input class="form__tel" type="tel" name="tel">
 					<span class="form__svg">
 						<svg class="form__svg-icon">
 							<use href="images/icons/sprite.svg#tel"></use>
 						</svg>
 					</span>
-					<input type="tel">
 					<span class="form__placeholder">Телефон (используется как логин)</span>
 				</label>
                 <label class="form__label">
+					<input type="password" name="password">
 					<span class="form__svg">
 						<svg class="form__svg-icon">
 							<use href="images/icons/sprite.svg#password"></use>
 						</svg>
 					</span>
-					<input type="password">
 					<span class="form__placeholder">Пароль</span>
 				</label>
             </div>
@@ -160,6 +161,11 @@
             </div>
         </div>
     </div>
+
+    <script src="js/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="js/libs/datepicker/datepicker.min.js"></script>
+    <script src="js/libs/mask/jquery.maskedinput.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
